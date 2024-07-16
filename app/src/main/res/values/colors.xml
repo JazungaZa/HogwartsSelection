@@ -7,5 +7,6 @@
     <color name="gryffindor_dark">#73022C</color>
     <color name="slytherin_dark">#054035</color>
     <color name="hogwarts_gold">#F2B84B</color>
+    <color name="hogwarts_white">#FDFDFD</color>
 
 </resources>
