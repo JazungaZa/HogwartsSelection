@@ -1,5 +1,6 @@
 package com.habijanic.hogwartsselection
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -25,7 +26,13 @@ class ListFragment : ListFragment() {
         var arrayAdapter = activity?.let { ArrayAdapter.createFromResource(it, R.array.houses, android.R.layout.simple_list_item_1) }
         listAdapter = arrayAdapter
 
+        listView.setOnItemClickListener { parent, view, position, id ->
 
+            val intent = Intent(activity,HouseActivity::class.java)
+            intent.putExtra("position",position)
+            startActivity(intent)
+
+        }
 
     }
 
