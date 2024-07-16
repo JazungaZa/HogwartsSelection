@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ravenclaw_dark">#154659</color>
+    <color name="hufflepuff_dark">#734C03</color>
+    <color name="gryffindor_dark">#73022C</color>
+    <color name="slytherin_dark">#054035</color>
+    <color name="hogwarts_gold">#F2B84B</color>
+
 </resources>
