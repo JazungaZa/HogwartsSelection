@@ -20,8 +20,29 @@ class DialogFragment : DialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view : View = inflater.inflate(R.layout.fragment_dialog, container, false)
+
+        name = view.findViewById(R.id.editTextName)
+        cancel = view.findViewById(R.id.buttonCancel)
+        ok = view.findViewById(R.id.buttonOK)
+
+        ok.setOnClickListener {
+            val userName : String = name.text.toString()
+            val mainActivity : MainActivity = activity as MainActivity
+
+            mainActivity.getUserData(userName)
+
+            dialog!!.dismiss()
+
+        }
+        cancel.setOnClickListener {
+
+            dialog!!.dismiss()
+
+        }
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dialog, container, false)
+        return view
     }
 
 
